@@ -1,65 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-<link rel="stylesheet" href="../static/css/style.css">
+    <link rel="stylesheet" href="../static/css/style.css">
 <link rel="stylesheet" href="../static/css/track_health.css">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>3D Health Assistant</title>
+    <title>Health Assistant</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-
-    <!-- Use url_for for static files -->
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/track_health.css') }}">
 </head>
-
 <body>
-    <!-- Header -->
     <header>
-        <div class="container">
-            <h1>Welcome to Your Personal Health Assistant</h1>
-            <p>Get health advice, track activities, and stay fit with a personal assistant.</p>
-        </div>
+        <h1>Welcome to Your Own Health Assistant</h1>
+        <p>Your health journey, redefined with advanced tracking and tips.</p>
     </header>
-
-    <!-- Features Section -->
     <section id="features">
         <div class="container">
             <div class="feature-card">
-                <h2><a href="{{ url_for('health_tips') }}">Health Tips</a></h2>
-                <p>Get daily health tips tailored to your lifestyle.</p>
+                <h2>Track Your Health</h2>
+                <p>Log your meals and exercises to monitor your progress.</p>
+                <a class="btn" href="/track_health">Get Started</a>
             </div>
             <div class="feature-card">
-                <h2><a href="{{ url_for('track_health') }}">Track Your Health</a></h2>
-                <p>Log meals, exercises, and monitor well-being with ease.</p>
-            </div>
-            <div class="feature-card">
-                <h2><a href="{{ url_for('assistant') }}">Talk to Assistant</a></h2>
-                <p>Instantly get personalized health advice.</p>
+                <h2>Health Tips</h2>
+                <p>Discover tips to improve your well-being and fitness.</p>
+                <a class="btn" href="/health_tips">Explore Tips</a>
             </div>
         </div>
     </section>
-
-    <!-- Call to Action Section -->
-    <section id="cta">
-        <div class="container">
-            <h2>Ready to take control of your health?</h2>
-            <a href="{{ url_for('assistant') }}" class="btn">Start Now</a>
-        </div>
-    </section>
-
-    <!-- Footer -->
     <footer>
-        <p>&copy; 2024 Health Assistant. All rights reserved.</p>
+        <p>&copy; 2025 Health Assistant. All rights reserved.</p>
     </footer>
 
-    <!-- Chatbot (Floating) -->
-    <div id="chat-container"></div>
-
-    <!-- Botpress Chatbot Scripts -->
+    <!-- Chatbot Integration -->
     <script src="https://cdn.botpress.cloud/webchat/v2.2/inject.js"></script>
     <script src="https://files.bpcontent.cloud/2024/12/21/08/20241221082530-AEYMJJ86.js"></script>
 </body>
-
 </html>
